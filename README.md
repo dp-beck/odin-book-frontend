@@ -1,8 +1,6 @@
-# React + Vite
+# Odin Book (Front End)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tbis is the front-end for my Odin Book project. Currently it is just the vite template files for a React SPA.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+First Order of Business...
+1. Set up each of the individual pages with routing using react router
