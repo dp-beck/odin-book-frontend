@@ -15,7 +15,10 @@ export default function SignIn() {
           <input type="password" name="password" id="password" />
   
           <input type="submit" value="Log In" />
+
         </form>
+
+        <p>Not a user, yet? To create a new account, <a href="http://" target="_blank" rel="noopener noreferrer">click here</a> </p>
     </>
   );
 }
