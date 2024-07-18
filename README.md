@@ -1,6 +1,6 @@
 # Odin Book (Front End)
 
-Tbis is the front-end for my Odin Book project. Currently it is just the vite template files for a React SPA.
+Tbis is the front-end for my Odin Book project. 
 
-First Order of Business...
-1. Set up each of the individual pages with routing using react router
+What I am working on now..
+1. Making sure the sign in process works 

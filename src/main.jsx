@@ -10,12 +10,16 @@ import './index.css';
 import ErrorPage from './routes/Error-Page';
 import Root from './routes/Root';
 import SignIn from './routes/Sign-In';
+import Index from './routes/Index';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
+    children: [
+      { index: true, element: <Index />}
+    ]
   },
   {
     path: "/sign-in",
