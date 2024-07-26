@@ -3,4 +3,5 @@
 Tbis is the front-end for my Odin Book project. 
 
 What I am working on now..
-1. Making sure the sign in process works 
+1. Test the wrong password message
+2. Build out the Home page once logged in
