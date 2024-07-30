@@ -68,7 +68,7 @@ export default function SignIn() {
 
         {wrongInfoMsg && (<p style={wrongInfoMsgStyle}>Wrong username or password entered.</p>)}
 
-        <p>Not a user, yet? To create a new account, <Link to='/signup'>Sign up here</Link> </p> 
+        <p>Not a user, yet? To create a new account, <Link to='/sign-up'>Sign up here</Link> </p> 
 
         {user && (<Navigate to='/' replace={true} />)}
     </>

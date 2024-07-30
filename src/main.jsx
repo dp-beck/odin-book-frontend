@@ -10,8 +10,9 @@ import './index.css';
 
 import ErrorPage from './routes/Error-Page';
 import Root from './routes/Root';
-import SignIn from './routes/Sign-In';
 import Index from './routes/Index';
+import SignIn from './routes/Sign-In';
+import SignUp from './routes/Sign-Up';
 
 // Hard coded the local host url for the servce -- will need to put that in
 // an environmental variable probably?
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
     path: "/sign-in",
     element: <SignIn />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: "/sign-up",
+    element: <SignUp/>,
+    errorElement: <ErrorPage/>
   }
 ]);
 
