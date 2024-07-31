@@ -1,12 +1,14 @@
 import "../App.css";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLoaderData } from "react-router-dom";
 
 export default function Root() {
+
+  const user = useLoaderData();
 
   return (
     <>
       <header>
-        <h1>Odin Book</h1>
+        <h1>Welcome to Odin Book {user.userName} </h1>
         
         <ul id="nav-bar">
           <li><a href="/">Home</a></li>
@@ -14,10 +16,10 @@ export default function Root() {
           <li><a href="/">Personal Profile</a></li>
           <li><a href="/">Friend Requests</a></li>
           <li><a href="/">Log Out</a></li>
-      </ul>
+        </ul>
       </header>
       <main>
-        <Outlet />
+        <Outlet context={user}/>
       </main>
       
     </>

@@ -1,5 +1,3 @@
-// Figure Out How to Upload a photo now
-
 import { useState } from "react";
 import { Navigate } from "react-router-dom";
 
