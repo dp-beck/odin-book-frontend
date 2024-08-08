@@ -8,5 +8,9 @@ password: testest2
 Tbis is the front-end for my Odin Book project. 
 
 What I am working on now..
-1. Build out / fix dummy content
-2. Build out the Home page once logged in -- currently working on list of posts
+1. Create basic interface / functionality for creating a post
+2. Fix up Post component and add
+    A. List of Comments
+    B. Likes Counter
+    C. Ability to Like
+    D. Ability to add comments

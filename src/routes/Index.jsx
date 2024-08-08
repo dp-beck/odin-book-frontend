@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
+import Post from "./Post";
 
 export default function Index() {
   const user = useOutletContext();
@@ -33,12 +34,20 @@ export default function Index() {
 
     return (
       <>
-        <div>CREATE A NEW POST</div>
-        {/* Get a list of posts and Map through them */}
-        <ul className="postList">
-        {postList.map((post) => 
-                    <li key={post._id}> <span>{post.body}</span> <span>{post.author.userName}</span> </li>)}
-        </ul>
+        <div>
+          <h2>CREATE A POST</h2>
+        </div>
+        <div> 
+          <h2>ALL POSTS</h2>
+          {/* Get a list of posts and Map through them */}
+          <ul className="postList">
+            {postList.map((post) => (
+              <li key={post._id}>
+                <Post author={post.author.userName} body={post.body} />
+              </li>
+            ))}
+          </ul>
+        </div>
         <div>SEARCH TOO FOR FINDING A NEW FRIEND</div>
       </>
     );
