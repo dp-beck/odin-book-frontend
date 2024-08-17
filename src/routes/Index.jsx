@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import Post from "./Post";
+import CreatePost from "./CreatePost";
 
 export default function Index() {
   const user = useOutletContext();
@@ -36,7 +37,7 @@ export default function Index() {
     return (
       <>
         <div>
-          <h2>CREATE A POST</h2>
+          <CreatePost user={user}/>
         </div>
         <div> 
           <h2>ALL POSTS</h2>
