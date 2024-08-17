@@ -19,6 +19,7 @@ export default function Index() {
           })
   }, []);
 
+  // Get List of Posts
   useEffect(() => {
     fetch('http://localhost:3000/posts')
         .then((res) => {
@@ -43,7 +44,13 @@ export default function Index() {
           <ul className="postList">
             {postList.map((post) => (
               <li key={post._id}>
-                <Post author={post.author.userName} body={post.body} />
+                <Post 
+                  author={post.author.userName} 
+                  authorPhoto={post.author.profilePhotoUrl} 
+                  body={post.body}
+                  time={post.createdAt} 
+                  likes={post.likes}
+                  comments={post.comments}/>
               </li>
             ))}
           </ul>
