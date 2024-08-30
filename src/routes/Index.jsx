@@ -46,6 +46,7 @@ export default function Index() {
             {postList.map((post) => (
               <li key={post._id}>
                 <Post 
+                  postId={post._id}
                   author={post.author.userName} 
                   authorPhoto={post.author.profilePhotoUrl} 
                   body={post.body}

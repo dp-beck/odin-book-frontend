@@ -14,12 +14,13 @@ export default function CreatePost(props) {
                 },
           
             }).then((res) => {
-                // PUT STUFF HERE
+                window.location.reload();
+                return res.json();
             })
 
         } 
-        catch {
-
+        catch (error) {
+            console.log(error);
         }
     }
  
