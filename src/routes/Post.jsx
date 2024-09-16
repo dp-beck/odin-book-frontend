@@ -5,14 +5,12 @@ export default function Post(props) {
 
     const [numberOfLikes, setNumberofLikes] = useState(props.likes.length);
 
-    // Gotta make a fetch request post to update likes in db
-    // TO DO: FIX -- Like I haven't wired up the bit that solves the problem of you know if you already liked it
     const addLike = () => {
         try {
             fetch(`http://localhost:3000/posts/${props.postId}/like`, {
                 method: 'POST',
                 body: JSON.stringify({
-                    LikeId: props.user._id,
+                    likerId: props.userId,
                 }),
 
                 headers: {
@@ -21,6 +19,11 @@ export default function Post(props) {
           
             }).then((res) => {
                 return res.json();
+            }).then((data) => {
+                if (!data.alreadyLiked) {
+                    updateNumberOfLikes();
+                    console.log(data.msg);
+                }
             })
 
         } 
@@ -31,11 +34,6 @@ export default function Post(props) {
 
     const updateNumberOfLikes = () => {
         setNumberofLikes(numberOfLikes+1);
-    }
-
-    const handleLikesButtonClick = () => {
-        addLike();
-        updateNumberOfLikes();
     }
 
     return (
@@ -51,7 +49,7 @@ export default function Post(props) {
             </div>
 
             <div>
-                <button onClick={handleLikesButtonClick}>LIKE</button>
+                <button onClick={addLike}>LIKE</button>
                 # Likes: {numberOfLikes}
             </div>
 

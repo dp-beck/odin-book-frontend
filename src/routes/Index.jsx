@@ -52,7 +52,8 @@ export default function Index() {
                   body={post.body}
                   time={post.createdAt} 
                   likes={post.likes}
-                  comments={post.comments}/>
+                  comments={post.comments}
+                  userId={user._id}/>
               </li>
             ))}
           </ul>

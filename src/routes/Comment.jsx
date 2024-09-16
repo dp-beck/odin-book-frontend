@@ -7,8 +7,7 @@ export default function Comment(props) {
             
             <div className="commentBody">
                 <p>{props.commentBody}</p>
-=            </div>
-
+            </div>
         </div>
     );
 }
