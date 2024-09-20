@@ -1,4 +1,5 @@
 import CommentList from "./CommentList";
+import CreateComment from "./CreateComment";
 import { useState } from "react";
 
 export default function Post(props) {
@@ -55,6 +56,11 @@ export default function Post(props) {
 
             <CommentList 
                 comments={props.comments}/>
+
+            <CreateComment
+                 postId={props.postId}
+                 userId={props.userId}
+            />
 
         </div>
     );

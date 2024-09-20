@@ -8,6 +8,8 @@ password: testest2
 Tbis is the front-end for my Odin Book project. 
 
 What I am working on now..
-1. Display Comments is Done -- now need an add comment thing
+1. Institute Settings Page
+2. Personal Profile
+3. Page Displaying Friend Request
+4. List of Users Broken Down By Friends and Not Friends
 
-// TO DO: GO BACK INTO COMMENT LIST AND ENSURE IT IS WORKING RIGHT //
