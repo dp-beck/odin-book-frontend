@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import Post from "./Post";
 import CreatePost from "./CreatePost";
+import UserList from "./UserList";
 
 export default function Index() {
   const user = useOutletContext();
@@ -32,12 +33,16 @@ export default function Index() {
         })
   }, []);
 
-// FETCH CALL FOR SUBMITTING A POST
-
     return (
       <>
         <div>
           <CreatePost user={user}/>
+        </div>
+        <div>
+          <UserList 
+            user={user}
+            userList={userList}
+            />
         </div>
         <div> 
           <h2>ALL POSTS</h2>
@@ -58,7 +63,6 @@ export default function Index() {
             ))}
           </ul>
         </div>
-        <div>SEARCH TOO FOR FINDING A NEW FRIEND</div>
       </>
     );
   }
